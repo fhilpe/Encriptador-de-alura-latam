@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header__logo {
+    display: inline-block;
+    margin: 20px;
+}
+
+.main__contenido {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    height: calc(100vh - 100px); /* Resta el espacio ocupado por el header */
+}
+
+.main__informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+
+.main__textarea {
+    width: 100%;
+    min-height: 200px;
+    overflow-y: auto; /* Permite el scroll vertical si el contenido excede la altura máxima */
+    resize: none; /* Desactiva el redimensionamiento manual del textarea */
+    border: 1px solid #0A3871;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+    opacity: 1; /* Asegura que el color sea completamente opaco */
+}
+
+.main__span__buttons {
+    width: 100%;
+    text-align: start;
+    margin: 20px 0;
+}
+
+.main__span__buttons span {
+    padding-left: 10%;
+    color: #495057;
+}
+
+.main__botones {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.boton__azul {
+    background-color: #0A3871;
+    color: white !important;
+}
+.boton__azul:hover {
+    background-color: white !important;
+    color: #0A3871 !important;
+}
+
+.button__decoretion {
+    border-radius: 24px;
+    outline: 1px solid #0A3871;
+    color: #0A3871;
+    border: none;
+    width: 280px;
+    height: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button__decoretion:hover {
+    background-color: #0A3871;
+    color: white;
+}
+
+.texto__encriptado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 35%;
+}
+
+.texto__encriptado img {
+    width: 80%;
+}
+
+.texto {
+    padding-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.vacio__legal__boton {
+    display: none;
+    margin-top: auto;
+    margin-bottom: 20px;
+
+}
+
+.vacio__legal__parrafo{
+    display: none;
+    text-align: justify;
+    padding: 0 15px;
+    overflow-y: scroll;
+}
+
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+    .main__contenido {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .main__informacion, .texto__encriptado {
+        width: 100%;
+    }
+
+    .main__textarea {
+        width: 90%;
+    }
+
+    .main__botones {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button__decoretion {
+        width: 100%;
+    }
+}
