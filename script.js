@@ -20,7 +20,7 @@ function encriptarTexto (){
             .replace(/[uú]/gi, "ufat")
             .replace(/g/gi, "game")
             .replace(/b/gi, "br")
-            .replace(/?/gi, "arrr")
+            .replace(/[?]/gi, "arrr")
             .replace(/[¿]/gi, "errr")
             .replace(/[/]/gi, "barr")
             .replace(/[#]/gi, "ffr")
