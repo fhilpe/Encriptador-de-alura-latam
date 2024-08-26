@@ -30,7 +30,20 @@ function encriptarTexto (){
             .replace(/[=]/gi, "yyr")
             .replace(/[¡]/gi, "nnr")
             .replace(/[!]/gi, "mmr")
-            .replace(/[{}[]()"`¨|°]/gi, " ")
+            .replace(/[{]/gi, "ttw")
+            .replace(/[}]/gi, "wwt")
+            .replace(/[[]/gi, "yyw")
+            .replace(/[\]]/gi, "wwy")
+            .replace(/[(]/gi, "ssw")
+            .replace(/[)]/gi, "wws")
+            .replace(/["]/gi, "cmmt")
+            .replace(/[¨]/gi, "cnnt")
+            .replace(/[`]/gi, "cmns")
+            .replace(/[´]/gi, "cnms")
+            .replace(/[|]/gi, "ddw")
+            .replace(/[°]/gi, "ggw")
+
+
 
             document.querySelector(".vacio__legal__parrafo").textContent = textoEncriptado;
     }
@@ -53,7 +66,7 @@ function desenCriptar (){
             .replace(/br/gi, "b")
             .replace(/arrr/gi, "?")
             .replace(/errr/gi, "¡")
-            .replace(/[barr]/gi, "/")
+            .replace(/barr/gi, "/")
             .replace(/ffr/gi, "#")
             .replace(/kkr/gi, "$")
             .replace(/xxr/gi, "%")
@@ -61,6 +74,18 @@ function desenCriptar (){
             .replace(/yyr/gi, "=")
             .replace(/nnr/gi, "¡")
             .replace(/mmr/gi, "!")
+            .replace(/ttw/gi, "{")
+            .replace(/wwt/gi, "}")
+            .replace(/yyw/gi, "[")
+            .replace(/wwy/gi, "]")
+            .replace(/ssw/gi, "(")
+            .replace(/wws/gi, ")")
+            .replace(/cmmt/gi, "\"")
+            .replace(/cnnt/gi, "¨")
+            .replace(/cmns/gi, "`")
+            .replace(/cnms/gi, "´")
+            .replace(/ddw/gi, "|")
+            .replace(/ggw/gi, "°")
             
 
             document.querySelector(".vacio__legal__parrafo").textContent = textoEncriptado;
