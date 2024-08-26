@@ -13,13 +13,24 @@ function encriptarTexto (){
     }else{
         limpiarCaja()
             let textoEncriptado = textarea
-            .replace(/e/gi, "enter")
-            .replace(/i/gi, "imes")
-            .replace(/o/gi, "over")
-            .replace(/a/gi, "ai")
-            .replace(/u/gi, "ufat")
+            .replace(/[eé]/gi, "enter")
+            .replace(/[ií]/gi, "imes")
+            .replace(/[oó]/gi, "over")
+            .replace(/[aá]/gi, "ai")
+            .replace(/[uú]/gi, "ufat")
             .replace(/g/gi, "game")
             .replace(/b/gi, "br")
+            .replace(/?/gi, "arrr")
+            .replace(/¿/gi, "errr")
+            .replace(/[/]/gi, "barr")
+            .replace(/#/gi, "ffr")
+            .replace(/$/gi, "kkr")
+            .replace(/%/gi, "xxr")
+            .replace(/&/gi, "qqr")
+            .replace(/=/gi, "yyr")
+            .replace(/¡/gi, "nnr")
+            .replace(/!/gi, "mmr")
+            .replace(/[{}[]()"`¨|°]/gi, " ")
 
             document.querySelector(".vacio__legal__parrafo").textContent = textoEncriptado;
     }
@@ -40,6 +51,17 @@ function desenCriptar (){
             .replace(/ufat/gi, "u")
             .replace(/game/gi, "g")
             .replace(/br/gi, "b")
+            .replace(/arrr/gi, "?")
+            .replace(/errr/gi, "¡")
+            .replace(/[barr]/gi, "/")
+            .replace(/ffr/gi, "#")
+            .replace(/kkr/gi, "$")
+            .replace(/xxr/gi, "%")
+            .replace(/qqr/gi, "&")
+            .replace(/yyr/gi, "=")
+            .replace(/nnr/gi, "¡")
+            .replace(/mmr/gi, "!")
+            
 
             document.querySelector(".vacio__legal__parrafo").textContent = textoEncriptado;
     }
